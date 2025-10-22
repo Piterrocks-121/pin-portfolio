@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX Portfolio - Pintu | Product, Interaction & UX Designer</title>
+    <meta name="description" content="I'm Pintu, a product, interaction & UX designer turning ideas into intuitive experiences. I craft beautiful and functional digital experiences that users love.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Skip to content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__container">
+                <a href="#" class="nav__logo">
+                    <img src="Portfoliopin.png" alt="Portfoliopin" class="nav__logo-image">
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <ul class="nav__menu" id="nav-menu">
+                    <li class="nav__item">
+                        <a href="#work" class="nav__link">My Work</a>
+                    </li>
+                    <li class="nav__item">
+                        <button class="nav__theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+                            <svg class="theme-icon theme-icon--light" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5M17.6859 17.69L18.5 18.5M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            <svg class="theme-icon theme-icon--dark" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </li>
+                    <li class="nav__item">
+                        <button class="nav__search-toggle" id="search-toggle" aria-label="Toggle website search">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 21L16.514 16.506L21 21ZM19 10.5C19 15.194 15.194 19 10.5 19C5.806 19 2 15.194 2 10.5C2 5.806 5.806 2 10.5 2C15.194 2 19 5.806 19 10.5Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="nav__toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                    <span class="nav__toggle-line"></span>
+                </button>
+            </div>
+
+            <!-- Search Bar -->
+            <div class="search-bar" id="search-bar">
+                <div class="search-bar__container">
+                    <input type="search" class="search-bar__input" placeholder="Search portfolio..." aria-label="Search website">
+                    <button class="search-bar__close" id="search-close" aria-label="Close search">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main id="main-content" class="main">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero__particles"></div>
+            <div class="hero__container">
+                <div class="hero__content">
+                    <div class="hero__badge">
+                        <span class="hero__badge-text">✨ Available for new projects</span>
+                    </div>
+                    <h1 class="hero__greeting">Hello there!</h1>
+                    <h2 class="hero__title">
+                        I'm <span class="hero__name">Pintu</span> a product, interaction & UX designer turning ideas into 
+                        <span class="hero__highlight">intuitive experiences</span>
+                    </h2>
+                    <p class="hero__subtitle">
+                        I craft beautiful and functional digital experiences that users love. 
+                        <span class="hero__subtitle-accent">Let's create something amazing together.</span>
+                    </p>
+                    <div class="hero__cta">
+                        <a href="#work" class="btn btn--primary">
+                            <span>View My Work</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </a>
+                        <a href="#contact" class="btn btn--secondary">
+                            <span>Get In Touch</span>
+                        </a>
+                        <a href="https://in.linkedin.com/in/pintu-87b86689" target="_blank" rel="noopener noreferrer" class="btn btn--social" aria-label="LinkedIn Profile">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" fill="currentColor"/>
+                            </svg>
+                        </a>
+                        <a href="https://dribbble.com/yourprofile" target="_blank" rel="noopener noreferrer" class="btn btn--social" aria-label="Dribbble Profile">
+                            <svg width="20" height="20" viewBox="-271 273 255.9 256" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M-18.7,374.8c-1.7-8.2-4.2-16.2-7.5-24c-3.2-7.6-7.2-14.8-11.8-21.6c-4.6-6.8-9.8-13-15.5-18.8c-5.8-5.8-12.2-11.1-18.8-15.5c-6.8-4.6-14.2-8.6-21.6-11.8c-7.7-3.3-15.7-5.8-24-7.5c-8.4-1.7-17-2.6-25.7-2.6s-17.3,0.9-25.7,2.6c-8.2,1.7-16.2,4.2-23.9,7.5c-7.6,3.2-14.8,7.2-21.6,11.8c-6.8,4.6-13.1,9.8-18.8,15.5s-11,12.2-15.5,18.8c-4.6,6.8-8.6,14-11.8,21.6c-3.3,7.7-5.8,15.7-7.5,24c-1.7,8.4-2.6,17-2.6,25.7s0.9,17.3,2.6,25.7c1.7,8.2,4.2,16.2,7.5,23.9c3.2,7.6,7.2,14.8,11.8,21.7c4.6,6.8,9.8,13,15.5,18.8c5.8,5.8,12.2,11,18.8,15.5c6.8,4.6,14.2,8.6,21.6,11.8c7.7,3.3,15.7,5.8,23.9,7.5c8.4,1.7,17,2.6,25.7,2.6s17.2-0.9,25.7-2.6c8.2-1.7,16.2-4.2,24-7.5c7.6-3.2,14.8-7.2,21.6-11.8c6.8-4.6,13.1-9.8,18.8-15.5c5.8-5.8,11-12.2,15.5-18.8c4.6-6.8,8.6-14.1,11.8-21.7c3.3-7.7,5.8-15.7,7.5-23.9c1.7-8.4,2.6-17,2.6-25.7S-17,383.2-18.7,374.8z M-143.6,291.6c27.6,0,52.7,10.3,71.9,27.2c-0.3,0.4-15.7,24-56.9,39.4c-18.6-34.2-39.1-61.4-40.8-63.6C-161.1,292.7-152.5,291.6-143.6,291.6z M-169.9,294.8C-169.9,294.7-169.8,294.7-169.9,294.8L-169.9,294.8z M-190.1,302c1.5,1.9,21.6,29.3,40.5,62.8c-52.3,13.8-97.7,13.3-100.5,13.2C-243.2,344.3-220.5,316.3-190.1,302z M-224.7,473.2c-17.3-19.2-27.9-44.7-27.9-72.7c0-1.2,0.1-2.3,0.1-3.4c1.9,0,55.7,1.3,111.8-15.5c3.1,6.1,6.1,12.4,8.9,18.5c-1.4,0.4-2.9,0.8-4.3,1.3C-194.9,420.4-224.7,473.2-224.7,473.2z M-143.6,509.4c-25.4,0-48.5-8.7-67-23.1c0.4-0.8,21.5-45.7,85.5-68c0.2-0.1,0.5-0.2,0.7-0.2c15.3,39.8,21.6,73.1,23.2,82.7C-114.2,506.3-128.6,509.4-143.6,509.4z M-82.8,490.8c-1.1-6.6-6.9-38.5-21.2-77.8c35.2-5.6,65.7,4,67.9,4.8C-40.9,448.1-58.4,474.3-82.8,490.8z M-110.6,395.8c-0.8-1.9-1.6-3.7-2.4-5.6c-2.3-5.4-4.7-10.6-7.3-15.8c43-17.5,60.5-42.8,60.7-43.1c15.2,18.6,24.5,42.3,24.8,68.1C-36.3,399.1-73.2,391.1-110.6,395.8z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero__visual">
+                    <div class="ux-art-container">
+                        <!-- Main Circular Container -->
+                        <div class="hero-circle-container">
+                            <!-- Circular Background -->
+                            <div class="hero-circle-bg"></div>
+                            
+                            <!-- Central UX Element -->
+                            <div class="center-ux-element">
+                                <div class="center-showcase">
+                                    <!-- Simple Interactive Component -->
+                                    <div class="center-component">
+                                        <div class="center-icon">
+                                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
+                                                <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                <path d="M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            </svg>
+                                        </div>
+                                        <div class="center-pulse"></div>
+                                        <div class="center-rings">
+                                            <div class="center-ring ring-1"></div>
+                                            <div class="center-ring ring-2"></div>
+                                            <div class="center-ring ring-3"></div>
+                                        </div>
+                                    </div>
+                                    
+                                    <!-- Left Side Components -->
+                                    <div class="left-side-components">
+                                        <!-- Cart Component -->
+                                        <div class="side-component cart-component">
+                                            <div class="component-icon">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                                    <circle cx="9" cy="21" r="1" stroke="currentColor" stroke-width="2"/>
+                                                    <circle cx="20" cy="21" r="1" stroke="currentColor" stroke-width="2"/>
+                                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" stroke="currentColor" stroke-width="2"/>
+                                                </svg>
+                                                <div class="cart-badge">3</div>
+                                            </div>
+                                        </div>
+                                        
+                                        <!-- Search Component -->
+                                        <div class="side-component search-component">
+                                            <div class="component-icon">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                                    <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                                                    <path d="m21 21-4.35-4.35" stroke="currentColor" stroke-width="2"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            
+                        <!-- Geometric Background Elements -->
+                        <div class="geometric-elements">
+                            <!-- Floating Circles -->
+                            <div class="geometric-shape geometric-circle geometric-circle--1"></div>
+                            <div class="geometric-shape geometric-circle geometric-circle--2"></div>
+                            <div class="geometric-shape geometric-circle geometric-circle--3"></div>
+                            
+                            <!-- Floating Triangles -->
+                            <div class="geometric-shape geometric-triangle geometric-triangle--1"></div>
+                            <div class="geometric-shape geometric-triangle geometric-triangle--2"></div>
+                            
+                            <!-- Floating Lines -->
+                            <div class="geometric-shape geometric-line geometric-line--1"></div>
+                            <div class="geometric-shape geometric-line geometric-line--2"></div>
+                            
+                            <!-- Floating Dots -->
+                            <div class="geometric-dots">
+                                <div class="geometric-dot geometric-dot--1"></div>
+                                <div class="geometric-dot geometric-dot--2"></div>
+                                <div class="geometric-dot geometric-dot--3"></div>
+                                <div class="geometric-dot geometric-dot--4"></div>
+                            </div>
+                        </div>
+                        
+                            <!-- Advanced UX Components -->
+                            <div class="ux-elements">
+                                <!-- Interactive Button Component -->
+                                <div class="ux-component ux-component--button">
+                                    <div class="component-showcase">
+                                        <div class="animated-button" data-component="button">
+                                            <span class="btn-text">Add to Cart</span>
+                                            <div class="btn-ripple"></div>
+                                            <div class="btn-success-state">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                                <span>Added!</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Product Card Component -->
+                                <div class="ux-component ux-component--product">
+                                    <div class="mini-product-card" data-component="product">
+                                        <div class="product-image">
+                                            <div class="product-placeholder">
+                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                                                    <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
+                                                    <circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" stroke-width="2"/>
+                                                    <polyline points="21,15 16,10 5,21" stroke="currentColor" stroke-width="2"/>
+                                                </svg>
+                                            </div>
+                                            <div class="product-badge">New</div>
+                                            <div class="product-heart">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="product-info">
+                                            <div class="product-title">Design Book</div>
+                                            <div class="product-price">$29</div>
+                                            <div class="product-rating">
+                                                <div class="stars">
+                                                    <span class="star active"></span>
+                                                    <span class="star active"></span>
+                                                    <span class="star active"></span>
+                                                    <span class="star active"></span>
+                                                    <span class="star"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Notification Component -->
+                                <div class="ux-component ux-component--notification">
+                                    <div class="notification-demo" data-component="notification">
+                                        <div class="notification success">
+                                            <div class="notification-icon">
+                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                                </svg>
+                                            </div>
+                                            <div class="notification-content">
+                                                <div class="notification-title">Success!</div>
+                                                <div class="notification-message">Item added to cart</div>
+                                            </div>
+                                            <div class="notification-progress"></div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Search Component -->
+                                <div class="ux-component ux-component--search">
+                                    <div class="search-showcase">
+                                        <div class="animated-search" data-component="search">
+                                            <div class="search-input-container">
+                                                <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                                    <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                                                    <path d="m21 21-4.35-4.35" stroke="currentColor" stroke-width="2"/>
+                                                </svg>
+                                                <div class="search-input">Search...</div>
+                                                <div class="search-cursor"></div>
+                                            </div>
+                                            <div class="search-suggestions">
+                                                <div class="search-suggestion">UX Design</div>
+                                                <div class="search-suggestion">Portfolio</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Rating Component -->
+                                <div class="ux-component ux-component--rating">
+                                    <div class="rating-showcase">
+                                        <div class="animated-rating" data-component="rating">
+                                            <div class="rating-title">Rate Experience</div>
+                                            <div class="rating-stars">
+                                                <div class="rating-star" data-rating="1">★</div>
+                                                <div class="rating-star" data-rating="2">★</div>
+                                                <div class="rating-star" data-rating="3">★</div>
+                                                <div class="rating-star" data-rating="4">★</div>
+                                                <div class="rating-star" data-rating="5">★</div>
+                                            </div>
+                                            <div class="rating-feedback">Excellent!</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Floating Action Button -->
+                                <div class="ux-component ux-component--fab">
+                                    <div class="fab-showcase">
+                                        <div class="floating-action-btn" data-component="fab">
+                                            <div class="fab-main">
+                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                                                    <line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2"/>
+                                                    <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2"/>
+                                                </svg>
+                                            </div>
+                                            <div class="fab-options">
+                                                <div class="fab-option">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="2"/>
+                                                    </svg>
+                                                </div>
+                                                <div class="fab-option">
+                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
+                                                        <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
+                                                    </svg>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="projects" id="work">
+            <div class="projects__container">
+                <div class="projects__header">
+                    <h2 class="projects__title">My Projects</h2>
+                    <p class="projects__subtitle">Explore my latest work and creative solutions</p>
+                </div>
+                <div class="projects__grid">
+                    <article class="project-card">
+                        <div class="project-card__image">
+                            <img src="caretap.png" alt="CareTap Mobile App Design" class="project-card__img">
+                            <div class="project-card__image-overlay"></div>
+                            <div class="project-card__overlay">
+                                <div class="project-card__tags">
+                                    <span class="project-tag">UI/UX</span>
+                                    <span class="project-tag">Mobile</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <div class="project-card__header">
+                                <h3 class="project-card__title">Mobile App CareTap</h3>
+                                <div class="project-card__year">2025</div>
+                            </div>
+                            <p class="project-card__description">Intuitive mobile experience with seamless user interactions and modern design principles</p>
+                            <a href="https://uxportfoliopin.com/app-for-health/" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                                <span>View Project</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card__image">
+                            <img src="LIMS.png" alt="LIMS Web Platform" class="project-card__img">
+                            <div class="project-card__image-overlay"></div>
+                            <div class="project-card__overlay">
+                                <div class="project-card__tags">
+                                    <span class="project-tag">AR/VR</span>
+                                    <span class="project-tag">UX/UI</span>
+                                    <span class="project-tag">Deep Research</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <div class="project-card__header">
+                                <h3 class="project-card__title"> AR/VR </h3>
+                                <div class="project-card__year">2024</div>
+                            </div>
+                            <p class="project-card__description">Comprehensive web solution with modern design principles and responsive architecture</p>
+                            <a href="https://uxportfoliopin.com/msholns/" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                                <span>View Project</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card__image">
+                            <img src="robosuit.png" alt="Dashboard Interface - Robosuit" class="project-card__img">
+                            <div class="project-card__image-overlay"></div>
+                            <div class="project-card__overlay">
+                                <div class="project-card__tags">
+                                    <span class="project-tag">Dashboard</span>
+                                    <span class="project-tag">Data Viz</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <div class="project-card__header">
+                                <h3 class="project-card__title">Dashboard Interface Robosuit</h3>
+                                <div class="project-card__year">2025</div>
+                            </div>
+                            <p class="project-card__description">Data visualization and user-friendly dashboard design with advanced analytics</p>
+                            <a href="https://uxportfoliopin.com/robo-tools/" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                                <span>View Project</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card__image">
+                            <img src="Tescoshop.png" alt="TescoShop E-commerce Experience" class="project-card__img">
+                            <div class="project-card__image-overlay"></div>
+                            <div class="project-card__overlay">
+                                <div class="project-card__tags">
+                                    <span class="project-tag">E-commerce</span>
+                                    <span class="project-tag">UX</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <div class="project-card__header">
+                                <h3 class="project-card__title">E-commerce Experience</h3>
+                                <div class="project-card__year">2023</div>
+                            </div>
+                            <p class="project-card__description">Streamlined shopping experience with conversion optimization and user-centric design</p>
+                            <a href="https://uxportfoliopin.com/dbt/" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                                <span>View case study</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card__image">
+                            <img src="ibma.png" alt="IBM A Brand Identity" class="project-card__img">
+                            <div class="project-card__image-overlay"></div>
+                            <div class="project-card__overlay">
+                                <div class="project-card__tags">
+                                    <span class="project-tag">Ai Automation</span>
+                                    <span class="project-tag">ux strategy</span>
+                                    <span class="project-tag">ux research</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-card__content">
+                            <div class="project-card__header">
+                                <h3 class="project-card__title"> Ai automation for cloud app </h3>
+                                <div class="project-card__year">2022</div>
+                            </div>
+                            <p class="project-card__description">Complete brand identity and visual design system with comprehensive guidelines</p>
+                            <a href="https://uxportfoliopin.com/caapp/" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                                <span>View Project</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__copyright">
+                Copyright ©2026 Uxportfoliopin.com All Rights Reserved.
+            </p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
