@@ -197,7 +197,7 @@ button {
 }
 
 [data-theme="dark"] .header {
-  background: rgba(15, 23, 42, 0.95);
+  background: rgba(8, 14, 28, 0.97);
 }
 
 .nav__container {
@@ -207,7 +207,7 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 50px;
+  height: 72px;
 }
 
 .nav__logo {
@@ -218,7 +218,7 @@ button {
 }
 
 .nav__logo-image {
-  height: 32px;
+  height: 44px;
   width: auto;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   filter: brightness(1);
@@ -587,67 +587,69 @@ button {
   color: var(--primary-color);
 }
 
+/* Hero typography - colourful style (gradients + accents) */
 .hero__content {
   animation: fadeInUp 0.8s ease-out;
 }
 
-.hero__greeting {
-  font-size: 1.5rem;
+.hero__intro {
+  font-size: 2rem;
   font-weight: 400;
   color: var(--text-secondary);
-  margin-bottom: 1rem;
+  margin-bottom: 0.35rem;
 }
 
 .hero__title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  line-height: 1.1;
-  margin-bottom: 1.5rem;
-  color: var(--text-primary);
-  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Pacifico", cursive;
+  font-size: clamp(3rem, 9.5vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1.15;
+  margin-bottom: 0.5rem;
   letter-spacing: -0.02em;
-}
-
-.hero__name {
-  color: var(--primary-color);
   position: relative;
-  background: linear-gradient(135deg, var(--primary-color), var(--primary-hover));
+  display: inline-block;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6, #ec4899, #06b6d4, #6366f1);
+  background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  animation: gradientShift 5s ease infinite;
+  filter: drop-shadow(0 0 24px rgba(99, 102, 241, 0.4)) drop-shadow(0 0 48px rgba(139, 92, 246, 0.25));
 }
 
-.hero__name::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background: linear-gradient(90deg, var(--primary-color), var(--primary-hover));
-  border-radius: 2px;
-  animation: shimmer 2s ease-in-out infinite;
+.hero__title::after {
+  display: none;
 }
 
-.hero__highlight {
-  background: linear-gradient(135deg, var(--primary-color), #ec4899);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 700;
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.hero__role {
+  font-size: 1.75rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  margin-bottom: 1.25rem;
+  letter-spacing: 0.02em;
 }
 
 .hero__subtitle {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   color: var(--text-secondary);
   margin-bottom: 2rem;
   line-height: 1.7;
   font-weight: 400;
+  max-width: 40ch;
 }
 
-.hero__subtitle-accent {
-  color: var(--primary-color);
+.hero__highlight {
   font-weight: 500;
+  background: linear-gradient(135deg, var(--primary-color), #ec4899);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 
@@ -704,19 +706,22 @@ button {
 .ux-art-container {
   position: relative;
   width: 100%;
-  max-width: 500px;
-  height: 500px;
+  max-width: 760px;
+  min-height: 440px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  gap: 64px;
+  padding: 40px 36px;
 }
 
 /* Hero Circle Container */
 .hero-circle-container {
   position: relative;
-  width: 350px;
-  height: 350px;
+  width: 360px;
+  height: 360px;
+  flex-shrink: 0;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -789,43 +794,43 @@ button {
   border-radius: 50%;
 }
 
-/* Position components in a circular arrangement */
+/* Floating components – smaller, softer, circle is hero */
 .ux-component {
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
-  animation: componentFloatIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards, gentleFloat 6s ease-in-out infinite;
+  animation: componentFloatIn 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards, gentleFloat 8s ease-in-out infinite;
   will-change: transform, opacity;
-  width: 140px;
-  height: 120px;
-  padding: 0.75rem;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  width: 92px;
+  height: 76px;
+  padding: 0.4rem;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 }
 
 [data-theme="dark"] .ux-component {
-  background: rgba(0, 0, 0, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .ux-component:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 12px 40px rgba(var(--primary-color-rgb), 0.2);
-  background: rgba(255, 255, 255, 0.15);
-  border-color: rgba(var(--primary-color-rgb), 0.3);
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 8px 28px rgba(var(--primary-color-rgb), 0.15);
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(var(--primary-color-rgb), 0.2);
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
 [data-theme="dark"] .ux-component:hover {
-  background: rgba(0, 0, 0, 0.3);
-  border-color: rgba(129, 140, 248, 0.4);
-  box-shadow: 0 12px 40px rgba(129, 140, 248, 0.3);
+  background: rgba(0, 0, 0, 0.25);
+  border-color: rgba(129, 140, 248, 0.3);
+  box-shadow: 0 8px 28px rgba(129, 140, 248, 0.2);
 }
 
 /* Central UX Element */
@@ -845,18 +850,16 @@ button {
 
 .center-component {
   position: relative;
-  width: 70px;
-  height: 70px;
+  width: 72px;
+  height: 72px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(15px);
-  border: 2px solid rgba(var(--primary-color-rgb), 0.3);
+  background: rgba(255, 255, 255, 0.14);
+  backdrop-filter: blur(14px);
+  border: 2px solid rgba(var(--primary-color-rgb), 0.28);
   border-radius: 50%;
-  box-shadow: 
-    0 8px 32px rgba(var(--primary-color-rgb), 0.2),
-    inset 0 0 20px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 28px rgba(var(--primary-color-rgb), 0.2), inset 0 0 20px rgba(255, 255, 255, 0.08);
   animation: centerFloat 4s ease-in-out infinite;
   cursor: pointer;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -996,31 +999,29 @@ button {
 .left-side-components {
   position: absolute;
   top: 50%;
-  left: -80px;
+  left: -100px;
   transform: translateY(-50%);
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 24px;
   z-index: 2;
 }
 
 .side-component {
   position: relative;
-  width: 50px;
-  height: 50px;
-  background: rgba(255, 255, 255, 0.12);
+  width: 48px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.11);
   backdrop-filter: blur(12px);
-  border: 2px solid rgba(var(--primary-color-rgb), 0.25);
+  border: 2px solid rgba(var(--primary-color-rgb), 0.22);
   border-radius: 50%;
-  box-shadow: 
-    0 6px 20px rgba(var(--primary-color-rgb), 0.2),
-    inset 0 0 15px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 5px 18px rgba(var(--primary-color-rgb), 0.18);
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   opacity: 0;
-  animation: sideComponentSlideIn 1.5s ease-out forwards, sideComponentFloat 6s ease-in-out infinite;
+  animation: sideComponentSlideIn 1.3s ease-out 0.15s forwards, sideComponentFloat 5.5s ease-in-out infinite;
   transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
 
@@ -1115,6 +1116,130 @@ button {
   50% {
     transform: scale(1.1);
   }
+}
+
+/* AI Icons (left side) */
+.ai-icons .ai-icon-item {
+  flex-direction: column;
+  gap: 4px;
+}
+.ai-icon-label {
+  font-size: 9px;
+  font-weight: 600;
+  color: var(--primary-color);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.center-component--ai .center-icon {
+  color: var(--primary-color);
+}
+.ai-sparkle-icon {
+  animation: sparkleRotate 6s linear infinite;
+}
+@keyframes sparkleRotate {
+  0%, 100% { transform: rotate(0deg); opacity: 1; }
+  50% { transform: rotate(180deg); opacity: 0.85; }
+}
+
+/* AI Agents Activity - right column */
+.ai-agents-activity {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  width: 160px;
+  max-width: 160px;
+}
+.ai-agent-pill {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(var(--primary-color-rgb), 0.25);
+  border-radius: 20px;
+  font-size: 11px;
+  color: var(--text-primary);
+  animation: agentPillFloat 4s ease-in-out infinite;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+.ai-agent-pill--1 { animation-delay: 0s; }
+.ai-agent-pill--2 { animation-delay: 0.5s; }
+.ai-agent-pill--3 { animation-delay: 1s; }
+.ai-agent-pill--4 { animation-delay: 1.5s; }
+[data-theme="dark"] .ai-agent-pill {
+  background: rgba(0, 0, 0, 0.25);
+  border-color: rgba(129, 140, 248, 0.35);
+}
+.ai-agent-pill__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #22c55e;
+  flex-shrink: 0;
+  animation: agentDotPulse 1.5s ease-in-out infinite;
+}
+.ai-agent-pill__name {
+  font-weight: 600;
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.ai-agent-pill__status {
+  font-size: 10px;
+  color: var(--primary-color);
+  font-weight: 500;
+}
+@keyframes agentPillFloat {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-4px); }
+}
+@keyframes agentDotPulse {
+  0%, 100% { opacity: 1; box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
+  50% { opacity: 0.9; box-shadow: 0 0 0 6px rgba(34, 197, 94, 0); }
+}
+
+/* AI agents inside floating component (replaces Design Book) */
+.ux-component--agents {
+  width: 128px;
+  height: 118px;
+  padding: 6px 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
+.ai-agents-activity--inline {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+
+.ai-agents-activity--inline .ai-agent-pill {
+  padding: 5px 8px;
+  border-radius: 12px;
+  font-size: 9px;
+  gap: 5px;
+  animation: none;
+}
+
+.ai-agents-activity--inline .ai-agent-pill__dot {
+  width: 4px;
+  height: 4px;
+}
+
+.ai-agents-activity--inline .ai-agent-pill__name {
+  font-size: 9px;
+}
+
+.ai-agents-activity--inline .ai-agent-pill__status {
+  font-size: 8px;
 }
 
 /* Floating Icons Inside Circle */
@@ -1285,37 +1410,37 @@ button {
   60% { transform: translateY(-2px) rotate(1deg); }
 }
 
-/* Perfect hexagonal distribution - 6 components at 60-degree intervals */
+/* Orbit around larger circle – softer presence */
 .ux-component--button { 
-  top: -60px;
+  top: -82px;
   left: 50%;
   transform: translateX(-50%);
   animation-delay: 0.1s; 
 }
 .ux-component--product { 
-  top: 50px;
-  right: -70px;
+  top: 72px;
+  right: -88px;
   animation-delay: 0.2s; 
 }
 .ux-component--notification { 
-  bottom: 50px;
-  right: -70px;
+  bottom: 72px;
+  right: -88px;
   animation-delay: 0.3s; 
 }
 .ux-component--search { 
-  bottom: -60px;
+  bottom: -82px;
   left: 50%;
   transform: translateX(-50%);
   animation-delay: 0.4s; 
 }
 .ux-component--rating { 
-  bottom: 50px;
-  left: -70px;
+  bottom: 72px;
+  left: -88px;
   animation-delay: 0.5s; 
 }
 .ux-component--fab { 
-  top: 50px;
-  left: -70px;
+  top: 72px;
+  left: -88px;
   animation-delay: 0.6s; 
 }
 
@@ -1391,16 +1516,21 @@ button {
   transform: scale(1);
 }
 
-/* Product Card Component */
+/* Product Card Component – fits inside small ux-component */
 .mini-product-card {
-  width: 140px;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 12px;
+  border-radius: 10px;
   overflow: hidden;
   backdrop-filter: blur(10px);
   transition: all 0.3s ease;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 [data-theme="dark"] .mini-product-card {
@@ -1416,7 +1546,8 @@ button {
 
 .product-image {
   position: relative;
-  height: 80px;
+  height: 36px;
+  flex-shrink: 0;
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
   display: flex;
   align-items: center;
@@ -1428,26 +1559,31 @@ button {
   opacity: 0.7;
 }
 
+.product-placeholder svg {
+  width: 16px;
+  height: 16px;
+}
+
 .product-badge {
   position: absolute;
-  top: 6px;
-  left: 6px;
+  top: 3px;
+  left: 3px;
   background: linear-gradient(135deg, #ef4444, #dc2626);
   color: white;
-  padding: 3px 8px;
-  border-radius: 6px;
-  font-size: 0.6rem;
+  padding: 2px 5px;
+  border-radius: 4px;
+  font-size: 0.5rem;
   font-weight: 600;
   animation: badgeGlow 3s ease-in-out infinite;
-  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.4);
+  box-shadow: 0 2px 6px rgba(239, 68, 68, 0.4);
 }
 
 .product-heart {
   position: absolute;
-  top: 6px;
-  right: 6px;
-  width: 24px;
-  height: 24px;
+  top: 3px;
+  right: 3px;
+  width: 16px;
+  height: 16px;
   background: rgba(255, 255, 255, 0.9);
   border-radius: 50%;
   display: flex;
@@ -1458,27 +1594,50 @@ button {
   transition: all 0.3s ease;
 }
 
+.product-heart svg {
+  width: 10px;
+  height: 10px;
+}
+
 .product-heart:hover {
   color: #ef4444;
   transform: scale(1.1);
 }
 
 .product-info {
-  padding: 8px;
+  padding: 4px 6px 6px;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
 
 .product-title {
-  font-size: 0.75rem;
+  font-size: 0.6rem;
   font-weight: 600;
   color: var(--text-primary);
-  margin-bottom: 4px;
+  margin-bottom: 1px;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .product-price {
-  font-size: 0.875rem;
+  font-size: 0.65rem;
   font-weight: 700;
   color: var(--primary-color);
-  margin-bottom: 4px;
+  margin-bottom: 2px;
+}
+
+.mini-product-card .product-rating {
+  margin-top: auto;
+}
+
+.mini-product-card .stars {
+  display: flex;
+  gap: 1px;
 }
 
 .stars {
@@ -1487,8 +1646,8 @@ button {
 }
 
 .star {
-  width: 8px;
-  height: 8px;
+  width: 6px;
+  height: 6px;
   background: #e2e8f0;
   clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
   transition: all 0.3s ease;
@@ -3774,11 +3933,11 @@ button {
     transform: translateY(40px) scale(0.8) rotateX(15deg);
   }
   60% {
-    opacity: 0.8;
+    opacity: 0.75;
     transform: translateY(-5px) scale(1.02) rotateX(-2deg);
   }
   100% {
-    opacity: 1;
+    opacity: 0.88;
     transform: translateY(0) scale(1) rotateX(0deg);
   }
 }
@@ -3862,14 +4021,8 @@ button {
   0%, 100% {
     transform: translateY(0px) rotate(0deg);
   }
-  25% {
-    transform: translateY(-2px) rotate(0.3deg);
-  }
   50% {
-    transform: translateY(-4px) rotate(0deg);
-  }
-  75% {
-    transform: translateY(-2px) rotate(-0.3deg);
+    transform: translateY(-2px) rotate(0deg);
   }
 }
 
@@ -4134,7 +4287,7 @@ button {
     transform: scale(0.8);
   }
   100% {
-    opacity: 1;
+    opacity: 0.5;
     transform: scale(1);
   }
 }
@@ -4445,7 +4598,7 @@ button {
   }
 
   .hero__title {
-    font-size: 2.5rem;
+    font-size: 3.25rem;
   }
 
   .hero__cta {
@@ -4460,35 +4613,57 @@ button {
     font-size: 2.5rem;
   }
 
-  /* Mobile Circle Adjustments */
+  /* Tablet: circle + animation */
   .hero-circle-container {
-    width: 280px;
-    height: 280px;
+    width: 320px;
+    height: 320px;
   }
 
   .ux-art-container {
-    height: 350px;
+    flex-direction: column;
+    gap: 36px;
+    padding: 36px 24px;
+    max-width: 100%;
+    min-height: 460px;
   }
 
   .center-component {
-    width: 60px;
-    height: 60px;
+    width: 64px;
+    height: 64px;
   }
 
   .center-icon svg {
-    width: 24px;
-    height: 24px;
+    width: 26px;
+    height: 26px;
   }
 
-  /* Mobile adjustments for left side components */
-  .left-side-components {
-    left: -60px;
-    gap: 15px;
+  .ux-component {
+    width: 84px;
+    height: 70px;
+    padding: 0.35rem;
   }
 
-  .side-component {
-    width: 40px;
-    height: 40px;
+  .ux-component--button { top: -68px; }
+  .ux-component--product { top: 58px; right: -72px; }
+  .ux-component--notification { bottom: 58px; right: -72px; }
+  .ux-component--search { bottom: -68px; }
+  .ux-component--rating { bottom: 58px; left: -72px; }
+  .ux-component--fab { top: 58px; left: -72px; }
+
+  .ux-component--agents {
+    width: 110px;
+    height: 102px;
+    padding: 5px 6px;
+  }
+  .ai-agents-activity--inline {
+    gap: 5px;
+  }
+  .ai-agents-activity--inline .ai-agent-pill {
+    padding: 4px 6px;
+    font-size: 8px;
+  }
+  .ai-agents-activity--inline .ai-agent-pill__status {
+    font-size: 7px;
   }
 
   .component-icon svg {
@@ -4504,37 +4679,7 @@ button {
     right: -6px;
   }
 
-  .ux-component {
-    width: 110px;
-    height: 90px;
-    padding: 0.5rem;
-  }
-
-  /* Mobile positioning adjustments */
-  .ux-component--button { 
-    top: -45px;
-  }
-  .ux-component--product { 
-    top: 40px;
-    right: -55px;
-  }
-  .ux-component--notification { 
-    bottom: 40px;
-    right: -55px;
-  }
-  .ux-component--search { 
-    bottom: -45px;
-  }
-  .ux-component--rating { 
-    bottom: 40px;
-    left: -55px;
-  }
-  .ux-component--fab { 
-    top: 40px;
-    left: -55px;
-  }
-
-  /* Adjust component sizes for mobile */
+  /* Adjust component sizes for tablet */
   .animated-button {
     padding: 8px 16px;
     font-size: 0.8rem;
@@ -4542,7 +4687,17 @@ button {
   }
 
   .mini-product-card {
-    width: 100px;
+    width: 100%;
+    max-width: 100%;
+  }
+  .mini-product-card .product-image {
+    height: 32px;
+  }
+  .mini-product-card .product-title {
+    font-size: 0.55rem;
+  }
+  .mini-product-card .product-price {
+    font-size: 0.6rem;
   }
 
   .animated-search {
@@ -4556,11 +4711,11 @@ button {
 
 @media screen and (max-width: 480px) {
   .hero__title {
-    font-size: 2rem;
+    font-size: 2.75rem;
   }
 
   .hero__subtitle {
-    font-size: 1.1rem;
+    font-size: 1.35rem;
   }
 
   .btn {
@@ -4625,11 +4780,12 @@ button {
   }
 
   .mini-product-card {
-    width: 120px;
+    width: 100%;
+    max-width: 100%;
   }
 
-  .product-image {
-    height: 60px;
+  .ux-art-container .product-image {
+    height: 40px;
   }
 
   .fab-main {
@@ -4684,11 +4840,11 @@ button {
 
 @media screen and (max-width: 480px) {
   .hero__title {
-    font-size: 2rem;
+    font-size: 2.75rem;
   }
 
   .hero__subtitle {
-    font-size: 1.1rem;
+    font-size: 1.35rem;
   }
 
   .btn {
@@ -4720,11 +4876,12 @@ button {
   }
 
   .mini-product-card {
-    width: 100px;
+    width: 100%;
+    max-width: 100%;
   }
 
-  .product-image {
-    height: 50px;
+  .ux-art-container .product-image {
+    height: 32px;
   }
 
   .fab-main {

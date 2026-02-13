@@ -1,14 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>UX Portfolio - Pintu | Product, Interaction & UX Designer</title>
-    <meta name="description" content="I'm Pintu, a product, interaction & UX designer turning ideas into intuitive experiences. I craft beautiful and functional digital experiences that users love.">
+    <meta name="description" content="I design products. I design intelligence. I solve problems. I'm Pintu — a AI Product, Interaction & UX Designer turning bold ideas into seamless experiences.">
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Skip to content link for accessibility -->
@@ -26,16 +26,6 @@
                 <ul class="nav__menu" id="nav-menu">
                     <li class="nav__item">
                         <a href="#work" class="nav__link">My Work</a>
-                    </li>
-                    <li class="nav__item">
-                        <button class="nav__theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
-                            <svg class="theme-icon theme-icon--light" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M12 3V4M12 20V21M4 12H3M6.31412 6.31412L5.5 5.5M17.6859 6.31412L18.5 5.5M6.31412 17.69L5.5 18.5M17.6859 17.69L18.5 18.5M21 12H20M16 12C16 14.2091 14.2091 16 12 16C9.79086 16 8 14.2091 8 12C8 9.79086 9.79086 8 12 8C14.2091 8 16 9.79086 16 12Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                            <svg class="theme-icon theme-icon--dark" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
                     </li>
                     <li class="nav__item">
                         <button class="nav__search-toggle" id="search-toggle" aria-label="Toggle website search">
@@ -78,24 +68,16 @@
                     <div class="hero__badge">
                         <span class="hero__badge-text">✨ Available for new projects</span>
                     </div>
-                    <h1 class="hero__greeting">Hello there!</h1>
-                    <h2 class="hero__title">
-                        I'm <span class="hero__name">Pintu</span> a product, interaction & UX designer turning ideas into 
-                        <span class="hero__highlight">intuitive experiences</span>
-                    </h2>
-                    <p class="hero__subtitle">
-                        I craft beautiful and functional digital experiences that users love. 
-                        <span class="hero__subtitle-accent">Let's create something amazing together.</span>
-                    </p>
+                    <p class="hero__intro">I'm</p>
+                    <h1 class="hero__title">Pintu</h1>
+                    <p class="hero__role">AI Product, Interaction & UX Designer</p>
+                    <p class="hero__subtitle">I design products and intelligence, solve problems, and turn bold ideas into <span class="hero__highlight">seamless experiences.</span></p>
                     <div class="hero__cta">
                         <a href="#work" class="btn btn--primary">
                             <span>View My Work</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
                                 <path d="M7 17L17 7M17 7H7M17 7V17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
-                        </a>
-                        <a href="#contact" class="btn btn--secondary">
-                            <span>Get In Touch</span>
                         </a>
                         <a href="https://in.linkedin.com/in/pintu-87b86689" target="_blank" rel="noopener noreferrer" class="btn btn--social" aria-label="LinkedIn Profile">
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -116,16 +98,15 @@
                             <!-- Circular Background -->
                             <div class="hero-circle-bg"></div>
                             
-                            <!-- Central UX Element -->
+                            <!-- Central UX Element - AI Icon -->
                             <div class="center-ux-element">
                                 <div class="center-showcase">
-                                    <!-- Simple Interactive Component -->
-                                    <div class="center-component">
+                                    <div class="center-component center-component--ai">
                                         <div class="center-icon">
-                                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
-                                                <path d="M12 2L2 7l10 5 10-5-10-5z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M2 17l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                <path d="M2 12l10 5 10-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" class="ai-sparkle-icon">
+                                                <path d="M12 3l1.5 4.5L18 9l-4.5 1.5L12 15l-1.5-4.5L6 9l4.5-1.5L12 3z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="currentColor"/>
+                                                <path d="M19 14l.8 2.4 2.4.8-2.4.8L19 20.4l-.8-2.4-2.4-.8 2.4-.8.8-2.4z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="currentColor"/>
+                                                <path d="M5 17l.6 1.8 1.8.6-1.8.6L5 21.8l-.6-1.8-1.8-.6 1.8-.6L5 17z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="currentColor"/>
                                             </svg>
                                         </div>
                                         <div class="center-pulse"></div>
@@ -135,51 +116,18 @@
                                             <div class="center-ring ring-3"></div>
                                         </div>
                                     </div>
-                                    
-                                    <!-- Left Side Components -->
-                                    <div class="left-side-components">
-                                        <!-- Cart Component -->
-                                        <div class="side-component cart-component">
-                                            <div class="component-icon">
-                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                                    <circle cx="9" cy="21" r="1" stroke="currentColor" stroke-width="2"/>
-                                                    <circle cx="20" cy="21" r="1" stroke="currentColor" stroke-width="2"/>
-                                                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" stroke="currentColor" stroke-width="2"/>
-                                                </svg>
-                                                <div class="cart-badge">3</div>
-                                            </div>
-                                        </div>
-                                        
-                                        <!-- Search Component -->
-                                        <div class="side-component search-component">
-                                            <div class="component-icon">
-                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                                    <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
-                                                    <path d="m21 21-4.35-4.35" stroke="currentColor" stroke-width="2"/>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
                                 </div>
                             </div>
                             
-                        <!-- Geometric Background Elements -->
+                                                    <!-- Geometric Background Elements -->
                         <div class="geometric-elements">
-                            <!-- Floating Circles -->
                             <div class="geometric-shape geometric-circle geometric-circle--1"></div>
                             <div class="geometric-shape geometric-circle geometric-circle--2"></div>
                             <div class="geometric-shape geometric-circle geometric-circle--3"></div>
-                            
-                            <!-- Floating Triangles -->
                             <div class="geometric-shape geometric-triangle geometric-triangle--1"></div>
                             <div class="geometric-shape geometric-triangle geometric-triangle--2"></div>
-                            
-                            <!-- Floating Lines -->
                             <div class="geometric-shape geometric-line geometric-line--1"></div>
                             <div class="geometric-shape geometric-line geometric-line--2"></div>
-                            
-                            <!-- Floating Dots -->
                             <div class="geometric-dots">
                                 <div class="geometric-dot geometric-dot--1"></div>
                                 <div class="geometric-dot geometric-dot--2"></div>
@@ -188,140 +136,100 @@
                             </div>
                         </div>
                         
-                            <!-- Advanced UX Components -->
-                            <div class="ux-elements">
-                                <!-- Interactive Button Component -->
-                                <div class="ux-component ux-component--button">
-                                    <div class="component-showcase">
-                                        <div class="animated-button" data-component="button">
-                                            <span class="btn-text">Add to Cart</span>
-                                            <div class="btn-ripple"></div>
-                                            <div class="btn-success-state">
-                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                                <span>Added!</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Product Card Component -->
-                                <div class="ux-component ux-component--product">
-                                    <div class="mini-product-card" data-component="product">
-                                        <div class="product-image">
-                                            <div class="product-placeholder">
-                                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                                                    <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2"/>
-                                                    <circle cx="8.5" cy="8.5" r="1.5" stroke="currentColor" stroke-width="2"/>
-                                                    <polyline points="21,15 16,10 5,21" stroke="currentColor" stroke-width="2"/>
-                                                </svg>
-                                            </div>
-                                            <div class="product-badge">New</div>
-                                            <div class="product-heart">
-                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                                    <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" stroke="currentColor" stroke-width="2"/>
-                                                </svg>
-                                            </div>
-                                        </div>
-                                        <div class="product-info">
-                                            <div class="product-title">Design Book</div>
-                                            <div class="product-price">$29</div>
-                                            <div class="product-rating">
-                                                <div class="stars">
-                                                    <span class="star active"></span>
-                                                    <span class="star active"></span>
-                                                    <span class="star active"></span>
-                                                    <span class="star active"></span>
-                                                    <span class="star"></span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Notification Component -->
-                                <div class="ux-component ux-component--notification">
-                                    <div class="notification-demo" data-component="notification">
-                                        <div class="notification success">
-                                            <div class="notification-icon">
-                                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                                </svg>
-                                            </div>
-                                            <div class="notification-content">
-                                                <div class="notification-title">Success!</div>
-                                                <div class="notification-message">Item added to cart</div>
-                                            </div>
-                                            <div class="notification-progress"></div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Search Component -->
-                                <div class="ux-component ux-component--search">
-                                    <div class="search-showcase">
-                                        <div class="animated-search" data-component="search">
-                                            <div class="search-input-container">
-                                                <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                                    <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
-                                                    <path d="m21 21-4.35-4.35" stroke="currentColor" stroke-width="2"/>
-                                                </svg>
-                                                <div class="search-input">Search...</div>
-                                                <div class="search-cursor"></div>
-                                            </div>
-                                            <div class="search-suggestions">
-                                                <div class="search-suggestion">UX Design</div>
-                                                <div class="search-suggestion">Portfolio</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Rating Component -->
-                                <div class="ux-component ux-component--rating">
-                                    <div class="rating-showcase">
-                                        <div class="animated-rating" data-component="rating">
-                                            <div class="rating-title">Rate Experience</div>
-                                            <div class="rating-stars">
-                                                <div class="rating-star" data-rating="1">★</div>
-                                                <div class="rating-star" data-rating="2">★</div>
-                                                <div class="rating-star" data-rating="3">★</div>
-                                                <div class="rating-star" data-rating="4">★</div>
-                                                <div class="rating-star" data-rating="5">★</div>
-                                            </div>
-                                            <div class="rating-feedback">Excellent!</div>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <!-- Floating Action Button -->
-                                <div class="ux-component ux-component--fab">
-                                    <div class="fab-showcase">
-                                        <div class="floating-action-btn" data-component="fab">
-                                            <div class="fab-main">
-                                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                                                    <line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2"/>
-                                                    <line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2"/>
-                                                </svg>
-                                            </div>
-                                            <div class="fab-options">
-                                                <div class="fab-option">
-                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                                        <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="2"/>
-                                                    </svg>
-                                                </div>
-                                                <div class="fab-option">
-                                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                                                        <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/>
-                                                        <circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/>
-                                                    </svg>
-                                                </div>
-                                            </div>
+                        <!-- Floating UX Components (original animation) -->
+                        <div class="ux-elements">
+                            <div class="ux-component ux-component--button">
+                                <div class="component-showcase">
+                                    <div class="animated-button" data-component="button">
+                                        <span class="btn-text">Add to Cart</span>
+                                        <div class="btn-ripple"></div>
+                                        <div class="btn-success-state">
+                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                            <span>Added!</span>
                                         </div>
                                     </div>
                                 </div>
                             </div>
+                            <div class="ux-component ux-component--product ux-component--agents">
+                                <div class="ai-agents-activity ai-agents-activity--inline">
+                                    <div class="ai-agent-pill ai-agent-pill--1">
+                                        <span class="ai-agent-pill__dot"></span>
+                                        <span class="ai-agent-pill__name">Safety Agent</span>
+                                        <span class="ai-agent-pill__status">Active</span>
+                                    </div>
+                                    <div class="ai-agent-pill ai-agent-pill--2">
+                                        <span class="ai-agent-pill__dot"></span>
+                                        <span class="ai-agent-pill__name">Orchestrator</span>
+                                        <span class="ai-agent-pill__status">Running</span>
+                                    </div>
+                                    <div class="ai-agent-pill ai-agent-pill--3">
+                                        <span class="ai-agent-pill__dot"></span>
+                                        <span class="ai-agent-pill__name">Research</span>
+                                        <span class="ai-agent-pill__status">Analyzing</span>
+                                    </div>
+                                    <div class="ai-agent-pill ai-agent-pill--4">
+                                        <span class="ai-agent-pill__dot"></span>
+                                        <span class="ai-agent-pill__name">Monitor</span>
+                                        <span class="ai-agent-pill__status">Live</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ux-component ux-component--notification">
+                                <div class="notification-demo" data-component="notification">
+                                    <div class="notification success">
+                                        <div class="notification-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+                                        <div class="notification-content">
+                                            <div class="notification-title">Success!</div>
+                                            <div class="notification-message">Item added to cart</div>
+                                        </div>
+                                        <div class="notification-progress"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ux-component ux-component--search">
+                                <div class="search-showcase">
+                                    <div class="animated-search" data-component="search">
+                                        <div class="search-input-container">
+                                            <svg class="search-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/><path d="m21 21-4.35-4.35" stroke="currentColor" stroke-width="2"/></svg>
+                                            <div class="search-input">Search...</div>
+                                            <div class="search-cursor"></div>
+                                        </div>
+                                        <div class="search-suggestions">
+                                            <div class="search-suggestion">UX Design</div>
+                                            <div class="search-suggestion">Portfolio</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ux-component ux-component--rating">
+                                <div class="rating-showcase">
+                                    <div class="animated-rating" data-component="rating">
+                                        <div class="rating-title">Rate Experience</div>
+                                        <div class="rating-stars">
+                                            <div class="rating-star" data-rating="1">★</div>
+                                            <div class="rating-star" data-rating="2">★</div>
+                                            <div class="rating-star" data-rating="3">★</div>
+                                            <div class="rating-star" data-rating="4">★</div>
+                                            <div class="rating-star" data-rating="5">★</div>
+                                        </div>
+                                        <div class="rating-feedback">Excellent!</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ux-component ux-component--fab">
+                                <div class="fab-showcase">
+                                    <div class="floating-action-btn" data-component="fab">
+                                        <div class="fab-main">
+                                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><line x1="12" y1="5" x2="12" y2="19" stroke="currentColor" stroke-width="2"/><line x1="5" y1="12" x2="19" y2="12" stroke="currentColor" stroke-width="2"/></svg>
+                                        </div>
+                                        <div class="fab-options">
+                                            <div class="fab-option"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" stroke="currentColor" stroke-width="2"/></svg></div>
+                                            <div class="fab-option"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="7" r="4" stroke="currentColor" stroke-width="2"/></svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

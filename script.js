@@ -139,40 +139,8 @@ class PortfolioApp {
   }
 
   setupThemeToggle() {
-    const themeToggle = document.getElementById('theme-toggle');
-    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
-    
-    // Get saved theme or default to dark mode
-    const savedTheme = localStorage.getItem('theme');
-    const currentTheme = savedTheme || 'dark';
-    
-    // Apply initial theme
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    
-    // Theme toggle functionality
-    if (themeToggle) {
-      themeToggle.addEventListener('click', () => {
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        document.documentElement.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        
-        // Add transition class for smooth theme change
-        document.body.classList.add('theme-transitioning');
-        setTimeout(() => {
-          document.body.classList.remove('theme-transitioning');
-        }, 300);
-      });
-    }
-    
-    // Listen for system theme changes
-    prefersDarkScheme.addEventListener('change', (e) => {
-      if (!localStorage.getItem('theme')) {
-        const newTheme = e.matches ? 'dark' : 'light';
-        document.documentElement.setAttribute('data-theme', newTheme);
-      }
-    });
+    // Site is dark mode only
+    document.documentElement.setAttribute('data-theme', 'dark');
   }
 
   // Utility method for debouncing
